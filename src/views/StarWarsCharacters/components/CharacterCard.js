@@ -1,11 +1,12 @@
+import {Link} from "react-router-dom";
 
 const CharacterCard = ({character})=>{
     const id = character.url.split("/")[5];
     return (
         <>
-          <div key={id} class="box">
+          <div key={id} className="box">
             <span></span>
-            <div class="content">
+            <div className="content">
               <h2>{character.name}</h2>
               <p>
                   Año de Nacimiento: {character.birth_year}
@@ -16,7 +17,7 @@ const CharacterCard = ({character})=>{
               <p>
                   Peso: {character.mass}
               </p>
-              <a href="#">Ir al Perfil</a>
+              <Link to={`/characters/${id}`}>Ir al Perfil</Link>
             </div>
           </div>
         </>

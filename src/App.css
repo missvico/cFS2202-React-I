@@ -8,7 +8,7 @@ body
   background: #1d061a
 }
 
-.container
+.containerCard
 {
   display: flex;
   justify-content: center;
@@ -29,6 +29,25 @@ h2
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
+nav ul {
+  list-style: none;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  background-color: blue;
+  padding: 20px;
+
+}
+
+
 
 .App-header {
   background-color: #282c34;

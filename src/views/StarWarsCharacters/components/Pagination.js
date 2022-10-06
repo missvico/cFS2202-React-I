@@ -4,7 +4,7 @@ const Pagination = ({handleClick, totalPages, page}) => {
     for(let i = 1; i<=totalPages; i++){
         const id= page==i? "clicked": ""
         pageButtons.push(
-            <li id={id} onClick={()=>handleClick(i)}>
+            <li className="page-item" id={id} onClick={()=>handleClick(i)}>
                 {i}
             </li>
         )
@@ -12,14 +12,23 @@ const Pagination = ({handleClick, totalPages, page}) => {
 
   return (
     <ul className="pagination">
-      <li onClick={()=>handleClick(page-1)} className="icon">
-         { "<"}
-      </li>
-      {pageButtons}
-      <li onClick={()=>handleClick(page+1)} className="icon">
-         {">"}
-      </li>
+      <li onClick={()=>handleClick(page-1)} className="page-item">
+          { "<"}
+       </li>
+       {pageButtons}
+       <li onClick={()=>handleClick(page+1)} className="page-item">
+        {">"}
+       </li>   
     </ul>
+    // <ul className="pagination">
+    //   <li onClick={()=>handleClick(page-1)} className="icon">
+    //      { "<"}
+    //   </li>
+    //   {pageButtons}
+    //   <li onClick={()=>handleClick(page+1)} className="icon">
+    //      {">"}
+    //   </li>
+    // </ul>
   );
 };
 
